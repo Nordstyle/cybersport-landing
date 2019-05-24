@@ -1,0 +1,257 @@
+.i-About
+  margin-bottom 20rem
+  position relative
+  &::before
+    content: ''
+    position absolute
+    right 0
+    top 0
+    transform: translateY(-70%);
+    background url('/images/bg3.png') center center/cover no-repeat
+    width 32rem
+    height 88.6rem
+    z-index -1
+  &::after
+    content: ''
+    position absolute
+    left 0
+    top 0
+    transform: translateY(-30%);
+    background url('/images/bg2.png') center center/cover no-repeat
+    width 23.4rem
+    height 46.7rem
+    z-index -1
+  &__subheading
+    font-weight: 400
+    font-size: 2.8rem
+    color #000
+    margin-bottom 0.8rem
+    text-align center
+  &__heading
+    font-family: 'Gotham Pro'
+    font-weight: 900
+    font-size: 4.6rem
+    color #000
+    margin-bottom 3.8rem
+    text-align center
+  &__text
+    font-size: 1.6rem
+    color black
+    line-height 2.6rem
+    &_bold
+      font-weight: bold
+    &_big
+      font-size: 1.8rem
+    &_center
+      text-align center
+    &_italic
+      font-style: italic
+  &__blockquote
+    position relative
+    width 100.4rem
+    border 1px solid #F04140
+    margin 0 auto
+    padding 5rem 0
+    text-align center
+    font-weight 600
+    font-style italic
+    font-size 2.4rem
+    color #000
+    margin-top 3.7rem
+    margin-bottom 4.2rem
+    & span
+      position relative
+    &::before
+      content ''
+      position absolute
+      top 2.5rem
+      bottom 2.5rem
+      left 1rem
+      right 1rem
+      border-left 1px solid #F26A7E
+      border-right 1px solid #F26A7E
+      opacity 0.2
+    &::after
+      content ''
+      position absolute
+      top 1rem
+      bottom 1rem
+      left 2.5rem
+      right 2.5rem
+      border-top 1px solid #F26A7E
+      border-bottom 1px solid #F26A7E
+      opacity 0.2
+  &__quote
+    width 2rem
+    height 1.7rem
+    position absolute
+    &_left
+      bottom 100%
+      right calc(100% + 1.5rem)
+    &_right
+      top 50%
+      left calc(100% + 1.5rem)
+  &__photo
+    flex 0 0 auto
+    width 35.8rem
+    margin-right 10rem
+    position relative
+    &::before
+      content attr(data-text)
+      position absolute
+      top 0
+      right -2.5rem
+      font-family: 'Gotham Pro'
+      font-weight: 900
+      font-size: 16rem
+      color #fff
+      text-shadow: 20px 10px 24px rgba(0,0,0,.1)
+    & img
+      width 100%
+      position relative
+      z-index 1
+  &__descriptionBlock
+    display flex
+    margin-bottom 7rem
+    position relative
+    z-index 1
+  &__description
+    display flex
+    flex-direction: column
+    justify-content center
+  &__cite
+    padding-left 2.7rem
+    position relative
+    margin 4.2rem 0
+    &::before
+      content: ''
+      position absolute
+      top 0
+      bottom 0
+      left 0
+      width 0.5rem
+      background-image linear-gradient(45deg, #3F58B5, #2DB0C2 )
+  &__convoy
+    margin-top 1rem
+    font-family: 'Gotham Pro'
+    font-weight: 900
+    font-size: 3rem
+    color #000
+    text-align center
+    line-height: 3.8rem
+    margin-bottom 5.2rem
+  &__footer
+    text-align center
+    & svg
+      width 0.7rem
+      height 1.2rem
+      margin-left 1.2rem
+      transform: translateY(1px)
+/*
+*
+*******************************************
+*
+*/
+@media (max-width: 1000px)
+  .i-About
+    margin-bottom 18rem
+    &::before,
+    &::after
+      display none
+    &__subheading
+      font-size: 2.4rem
+      margin-bottom 0.1rem
+    &__heading
+      font-size: 3.6rem
+      margin-bottom 3.4rem
+    &__blockquote
+      width 100%
+      font-size 1.9rem
+      margin-top 3.4rem
+    &__quote
+      &_left
+        right calc(100% + .3rem)
+      &_right
+        left calc(100% + .3rem)
+    &__photo
+      display flex
+      align-items center
+      width 24.5rem
+      margin-right 6rem
+      &::before
+        right 0
+        transform translate(25%,25%)
+        font-size: 12rem
+        z-index -1
+    &__descriptionBlock
+      margin-bottom 6.3rem
+    &__cite
+      margin 3.2rem 0
+    &__convoy
+      font-size: 2.4rem
+      line-height: 3.2rem
+      margin-bottom 1.4rem
+    &__footer
+      text-align center
+      & svg
+        width 0.7rem
+        height 1.2rem
+        margin-left 1.2rem
+        transform: translateY(1px)
+/*
+*
+*******************************************
+*
+*/
+@media (max-width: 667px)
+  .i-About
+    margin-bottom 10rem
+    &__subheading
+      font-size: 1.6rem
+      margin-bottom 0.1rem
+    &__heading
+      font-size: 2.6rem
+      margin-bottom 2.6rem
+    &__text
+      font-size: 1.4rem
+      &_big
+        font-size: 1.4rem
+    &__blockquote
+      font-size 1.6rem
+      margin-top 3.4rem
+      margin-bottom 3rem
+      padding 5.2rem 4.5rem 4.3rem
+    &__quote
+      &_left
+        right auto
+        left 0
+        transform translate(-200%,0)
+      &_right
+        left auto
+        right 0
+        transform translate(350%, 200%)
+    &__descriptionBlock
+      display block
+    &__photo
+      width 100%
+      margin-right 0
+      margin-bottom 4rem
+      &::before
+        transform translate(15%,25%)
+        font-size: 9rem
+    &__descriptionBlock
+      margin-bottom 6.3rem
+    &__cite
+      margin 2.2rem 0
+    &__convoy
+      font-size: 1.8rem
+      line-height: 2.6rem
+      margin-top 1.4rem
+      margin-bottom 2.2rem
+    &__footer
+      text-align center
+      & svg
+        width 0.7rem
+        height 1.2rem
+        margin-left 1.2rem
+        transform: translateY(1px)
